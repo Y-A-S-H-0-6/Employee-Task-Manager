@@ -1,0 +1,31 @@
+/* .selector-container {
+  margin-bottom: 20px;
+}
+
+.selector-label {
+  font-weight: 600;
+}
+
+.selector-dropdown {
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+} */
+
+.selector-label {
+  font-weight: 600;
+}
+.employee-selector {
+  margin-bottom: 25px;
+}
+
+.employee-selector select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+  font-size: 16px;
+}
