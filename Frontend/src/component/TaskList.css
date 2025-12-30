@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(-45deg, #c2e9fb, #a1c4fd, #c2e9fb, #a1c4fd);
+  background-size: 600% 600%;
+  animation: backgroundMove 15s ease infinite;
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes backgroundMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.task-list {
+  max-width: 700px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #ffffffd9;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.task-list h3 {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: bold;
+  background: linear-gradient(90deg, #007cf0, #00dfd8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #00dfd8, 0 0 20px #007cf0;
+  }
+  to {
+    text-shadow: 0 0 20px #00dfd8, 0 0 30px #007cf0;
+  }
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.task-card {
+  background-color: #f8f8f8;
+  border-radius: 12px;
+  margin: 10px 0;
+  padding: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s;
+}
+
+.task-card:hover {
+  transform: scale(1.01);
+}
+
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-title {
+  font-size: 1.1rem;
+  color: #222;
+  font-weight: bold;
+}
+
+.task-desc {
+  color: #555;
+  margin-top: 8px;
+  margin-bottom: 12px;
+}
+
+.status {
+  padding: 3px 8px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  color: white;
+  text-transform: capitalize;
+}
+
+.status.pending {
+  background-color: #ffa500;
+}
+
+.status.completed {
+  background-color: #28a745;
+}
+
+.task-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.edit-btn,
+.delete-btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.edit-btn {
+  background-color: #007bff;
+  color: white;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #0056b3;
+}
+
+.delete-btn:hover {
+  background-color: #a71d2a;
+}
+
+.no-task {
+  text-align: center;
+  color: #888;
+  font-style: italic;
+}
